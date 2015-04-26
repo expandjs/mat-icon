@@ -53,7 +53,7 @@ It can be used in conjunction with xp-iconset.
                 width: 100%;
             }
         </style>
-        <mat-ink id="matIconWrapper" color="{{color}}" disabled="{{disabled}}" opacity="{{opacity || (raster ? '' : 'icon')}}">
+        <mat-ink id="matIconWrapper" color="{{color}}" disabled="{{disabled}}" opacity="{{opacity || 'icon'}}">
             <xp-icon context="{{}}" id="matIconAdaptee" empty="{{empty}}" name="{{name}}" raster="{{raster}}" src="{{src}}"></xp-icon>
         </mat-ink>
     </template>
