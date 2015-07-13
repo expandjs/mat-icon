@@ -17,19 +17,22 @@ This element is used to display a material icon on a 24px square.
 @demo http://expandjs.com/demo/mat-icon
 
 @wraps xp-icon http://expandjs.com/elements/xp-icon
+@behavior xp-adapter-behavior http://expandjs.com/elements/xp-adapter-behavior
 
 @dependency polymer Polymer/polymer#^1.0.0
-@dependency expandjs ExpandJS/expandjs#0.9.3
-@dependency mat-ink ExpandJS/mat-ink#0.9.3
-@dependency xp-icon ExpandJS/xp-icon#0.9.3
+@dependency expandjs ExpandJS/expandjs#0.9.4
+@dependency mat-ink ExpandJS/mat-ink#0.9.4
+@dependency xp-adapter-behavior ExpandJS/xp-adapter-behavior#0.9.4
+@dependency xp-icon ExpandJS/xp-icon#0.9.4
 
-@devDependency mat-demo ExpandJS/mat-demo#0.9.3
-@devDependency mat-icons ExpandJS/mat-icons#0.9.3
+@devDependency mat-demo ExpandJS/mat-demo#0.9.4
+@devDependency mat-icons ExpandJS/mat-icons#0.9.4
 -->
 
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../expandjs/expandjs.html">
 <link rel="import" href="../mat-ink/mat-ink.html">
+<link rel="import" href="../xp-adapter-behavior/xp-adapter-behavior.html">
 <link rel="import" href="../xp-icon/xp-icon.html">
 
 <dom-module id="mat-icon">
@@ -66,6 +69,11 @@ This element is used to display a material icon on a 24px square.
 
             // ELEMENT
             is: 'mat-icon',
+
+            // BEHAVIORS
+            behaviors: [
+                Polymer.XPAdapterBehavior
+            ],
 
             /*********************************************************************/
 
@@ -166,6 +174,13 @@ This element is used to display a material icon on a 24px square.
             // COMPUTER
             _computeOpacity: function (opacity, raster) {
                 return opacity || (raster ? '' : 'icon');
+            },
+
+            /*********************************************************************/
+
+            // LISTENER
+            ready: function () {
+                this._adapt(this.$.matIconAdaptee);
             }
         });
     </script>
