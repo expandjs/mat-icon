@@ -7,7 +7,29 @@ The complete set of contributors may be found at https://expandjs.github.io/CONT
 -->
 
 <!--
-This element is used to display a material icon on a 24px square.
+An element used to display a [Material Design icon](https://www.google.com/design/icons/)
+on a 24px square.
+
+It can be used either using the provided icon sets from [mat-icons](http://expandjs.com/elements/mat-icons)
+or with any other custom icon using `src`.
+
+`icon` is built out of the icon's category and the icon's name itself.
+
+```html
+<link rel="import" href="../mat-icons/social-icons.html">
+<mat-icon name="social:cake"></mat-icon>
+
+<mat-icon src="http://example.com/path/icon.png"></mat-icon>
+```
+
+## Styling
+
+The icon's color can be changed accordingly to the
+[Material Design palette](http://www.google.com/design/spec/style/color.html#color-color-palette).
+
+```html
+<mat-icon name="toggle:star" color="yellow"></mat-icon>
+```
 
 @element mat-icon
 @description A custom element used to display a Material Design icon
