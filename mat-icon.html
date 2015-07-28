@@ -10,17 +10,27 @@ The complete set of contributors may be found at https://expandjs.github.io/CONT
 An element used to display a [Material Design icon](https://www.google.com/design/icons/)
 on a 24px square.
 
-It can be used either using the provided icon sets from [mat-icons](http://expandjs.com/elements/mat-icons)
-or with any other custom icon using `src`.
-
-`icon` is built out of the icon's category and the icon's name itself.
+It can be used either by importing an icon set from [mat-icons](http://expandjs.com/elements/mat-icons)...
 
 ```html
-<link rel="import" href="../mat-icons/social-icons.html">
-<mat-icon name="social:cake"></mat-icon>
+<link rel="import" href="bower_components/mat-icons/social-icons.html">
 
+<mat-icon name="social:cake"></mat-icon>
+```
+
+...or by setting `src`, linking to a custom icon...
+
+```html
 <mat-icon src="http://example.com/path/icon.png"></mat-icon>
 ```
+
+...or passing it directly in base64.
+
+```html
+<mat-icon src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDov..."></mat-icon>
+```
+
+---
 
 ## Styling
 
