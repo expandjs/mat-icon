@@ -70,31 +70,33 @@ The icon's color can be changed accordingly to the
 
 <dom-module id="mat-icon">
 
-    <style>
-        :host {
-            display: inline-block;
-            height: 24px;
-            overflow: visible;
-            width: 24px;
-        }
-
-        :host([empty]) {
-            display: none !important;
-        }
-
-        :host #matIconWrapper,
-        :host #matIconAdaptee {
-            border-radius: inherit;
-            display: block;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
-
     <template>
+
+        <style>
+            :host {
+                display: inline-block;
+                height: 24px;
+                overflow: visible;
+                width: 24px;
+            }
+
+            :host([empty]) {
+                display: none !important;
+            }
+
+            :host #matIconWrapper,
+            :host #matIconAdaptee {
+                border-radius: inherit;
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+        </style>
+
         <mat-ink id="matIconWrapper" color="[[color]]" disabled="[[disabled]]" opacity="[[_computeOpacity(opacity, raster)]]">
             <xp-icon id="matIconAdaptee" empty="{{empty}}" name="[[name]]" raster="{{raster}}" src="[[src]]"></xp-icon>
         </mat-ink>
+
     </template>
 
     <script>
