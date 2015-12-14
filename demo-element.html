@@ -1,23 +1,28 @@
 <link rel="import" href="../mat-demo/mat-demo.html">
-<link rel="import" href="../mat-icons/action-icons.html">
-<link rel="import" href="../mat-icons/av-icons.html">
+<link rel="import" href="../mat-icons/mat-icons.html">
 <link rel="import" href="mat-icon.html">
 
 <dom-module id="mat-icon-demo">
 
     <template>
 
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+
         <mat-demo name="mat-icon" type="element" url="http://expandjs.com/elements/mat-icon">
 
             <mat-demo-panel label="Iconset">
                 <script type="text/html">
-                    <mat-icon name="action:favorite" color="red"></mat-icon>
-                    <mat-icon name="action:alarm" color="blue"></mat-icon>
-                    <mat-icon name="av:album"></mat-icon>
+                    <mat-icon name="mat:folder"></mat-icon>
+                    <mat-icon name="mat:star" color="amber"></mat-icon>
+                    <mat-icon name="mat:home" color="green"></mat-icon>
                 </script>
-                <mat-icon name="action:favorite" color="red"></mat-icon>
-                <mat-icon name="action:alarm" color="blue"></mat-icon>
-                <mat-icon name="av:album"></mat-icon>
+                <mat-icon name="mat:folder"></mat-icon>
+                <mat-icon name="mat:star" color="amber"></mat-icon>
+                <mat-icon name="mat:home" color="green"></mat-icon>
             </mat-demo-panel>
 
             <mat-demo-panel label="Src (SVG)">
